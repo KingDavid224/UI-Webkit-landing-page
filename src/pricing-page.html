@@ -8,12 +8,17 @@
     <link href="./output.css" rel="stylesheet">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="w-[100%] h-[250vh] font-instrument">
-    <div class="w-100% h-[200vh] bg-black text-white">
+<body class="w-[100%] h-[400vh] lg:h-[270vh] font-instrument">
+    <div class="w-[100%] h-[400vh] lg:h-[270vh] bg-black text-white border">
         <!-- nav bar  -->
-        <nav class="w-[100%] h-[100vh]  pt-[70px] md:pt-0 lg:pt-0 md:h-120vh lg:h-[10vh] flex flex-col justify-start gap-[120px] md:flex-col lg:flex-row lg:justify-between items-center pl-[10px] md:pl-[30px] lg:pl-[100px] px-[10px] md:px[30px] lg:px-[100px]" id="nav">
+
+        <nav class="w-[100%]  pt-[30px] lg:pt[70px] md:pt-0 lg:pt-0 h-[10vh] flex   gap-[120px] justify-between items-center pl-[10px] md:pl-[30px] lg:pl-[100px] px-[10px] md:px[30px] lg:px-[100px] ">
+            <!-- logo -->
+
             <a href="/src/landing-page.html"><img src="/Files/Div [flex].png"></a>
-            <div class="flex flex-col gap-[30px] justify-center items-center  md:flex-col      lg:flex lg:flex-row lg:justify-center lg:gap-[30px] lg:items-center">
+            <!-- desktop menu  -->
+
+            <div class="hidden  lg:flex flex-row justify-center gap-[30px] items-center">
                 <p>Community</p>
                 <p>Roadmap</p>
                 <a href="/src/pricing-page.html">Pricing</a>
@@ -26,15 +31,39 @@
                         Started</button>
                 </div>
             </div>
-            <!-- <i class='bxr  bx-x' style='color:#ffffff' id="cancel-icon"></i> -->
-            </nav>
-            <!-- mobile nav  -->
-            <!-- <div>
-                <img src="/Files/Div [flex].png">
+
+            <!-- mobile icon {visible on mobile only} -->
+            <div class="text-white lg:hidden" id="menu-btn" >
                 <img src="/Files/Group 83.png" id="menu-icon">
-            </div> -->
+            </div>
+        </nav>
+
+            <!-- mobile menu  -->
+            <div class="hidden lg:hidden h-[100vh] bg-black pt-[70px] fixed  bottom-0 top-0 left-0 right-0 z-10" id="menu">
+                <main class="flex flex-col justify-center gap-[45px] items-center h-[100%]">
+                    <a href="/src/landing-page.html" class="absolute top-[70px] left-[140px] "><img src="/Files/Div [flex].png"></a>
+                    <i class='bxr  bx-x absolute top-[25px] right-[10px]  p-[16px] bg-[#ffffff25] rounded-[10px]' style='color:#ffffff' id="cancel-icon"></i>
+                    <p>Community</p>
+                    <p>Roadmap</p>
+                    <a href="/src/pricing-page.html">Pricing</a>
+                    <div class="flex flex-col w-[60%] gap-[20px]">
+                        <button
+                            class="bg-white hover:bg-linear-to-r from-indigo-300 to-indigo-500  text-black hover:text-white p-[5px] pl-[20px] px-[20px] rounded-[12px]">Log
+                            In</button>
+                        <button
+                            class="bg-linear-to-r from-indigo-300 to-indigo-500 text-white p-[6px] pl-[20px] px-[20px] rounded-[12px]">Get
+                            Started</button>
+                    </div>
+                </main>
+            </div>
+
+
+
+            <script src="/src/chat.js"></script>
+
+
             <!-- first section  -->
-            <div class="pt-[70px] pl-[10px] lg:pl-[100px] px-[10px] lg:px-[100px]">
+            <div class=" pt-[30px] lg:pt-[70px] pl-[10px] lg:pl-[100px] px-[10px] lg:px-[100px]">
                 <h1 class="text-center text-[47px] font-[500]">Simple Pricing</h1>
                 <p class="text-center text-[15px] lg:text-[19px] text-stone-400 mt-[20px]">Try all the visual builder features for free. Upgrade
                 <br>to export the code only if you are satisfied.</p>
@@ -45,26 +74,111 @@
                     </div>
                 </div>
                 
-                <div class="mt-[40px] mb-[40px]  w-[100%] flex justify-between gap-[2%] items-center ">
-                    <div class="bg-stone-800 w-[32%] p-[25px] rounded-[15px]">
-                        <p class="text-[18px] mb-[25px] text-stone-400">Monthly</p>
+                <div class="mt-[40px]  mb-[40px]  w-[100%] flex flex-col lg:flex-row justify-center gap-[20px] lg:gap-[2%] items-center relative">
+                    <div class="bg-stone-800 w-[85%] lg:w-[25%] p-[25px] rounded-[15px]">
+                        <p class="text-[20px] mb-[25px] text-stone-400">Monthly</p>
                         <p class="text-[35px] font-bold">$15 <span class="text-[17px] text-stone-400">$20</span></p>
                         <p class="text-stone-400 mb-[30px]">Per month</p>
                         <button class="bg-linear-to-r from-indigo-400 to-indigo-500 text-white p-[8px] w-[100%] rounded-[10px]">Try for free</button>
                     </div>
-                    <div class="bg-stone-800 w-[32%] p-[25px] rounded-[15px]">
-                        <p class="text-[18px] mb-[25px] text-stone-400">Annual</p>
+                    <div class="bg-stone-800 w-[85%] lg:w-[25%] p-[25px] rounded-[15px]">
+                        <p class="text-[20px] mb-[25px] text-stone-400">Annual</p>
                         <p class="text-[35px] font-bold">$79 <span  class="text-[17px] text-stone-400">$99</span></p>
                         <p class="text-stone-400 mb-[30px]">Per year</p>
                         <button class="bg-linear-to-r from-indigo-400 to-indigo-500 text-white p-[8px] w-[100%] rounded-[10px]">Try for free</button>
                     </div>
-                    <div class="bg-stone-800 w-[32%] p-[25px] rounded-[15px]">
-                        <p class="text-[18px] mb-[25px] text-stone-400">Lifetime</p>
+                    <div class="bg-stone-800 w-[85%] lg:w-[25%] p-[25px] rounded-[15px]">
+                        <p class="text-[20px] mb-[25px] text-stone-400">Lifetime</p>
                         <p class="text-[35px] font-bold">$99 <span  class="text-[17px] text-stone-400">$149</span></p>
                         <p class="text-stone-400 mb-[30px]">Pay once, use forever</p>
                         <button class="bg-linear-to-r from-indigo-400 to-indigo-500 text-white p-[8px] w-[100%] rounded-[10px]">Try for free</button>
                     </div>
+                    <button class="bg-indigo-500 text-white p-[6px] pl-[15px] px-[15px] rounded-[20px] absolute top-[-20px]">Most popular</button>
                 </div>
+                <!-- grid section   -->
+                <div class="w-[80%] pt-[40px]  ml-[10%] flex flex-col lg:grid lg:grid-cols-2 justify-center content-center gap-[25px] lg:gap-[10px]  ">
+                    <div class="w-[100%] flex justify-start gap-[15px]">
+                        <img src="/Files/Div [inline-flex].png" class="w-[34px] h-[34px]">
+                        <div>
+                            <h1 class="font-bold text-[18px]">Pre-made sections & templates</h1>
+                            <p class="text-[14px] text-stone-400">Get access to all the available sections & templates
+                            <br>(coming soon) and the ones we'll be adding in the future.</p>
+                        </div>
+                    </div>
+                    <div class="w-[100%] flex justify-start gap-[15px]">
+                        <img src="/Files/Div [inline-flex] (2).png" class="w-[34px] h-[34px]">
+                        <div>
+                            <h1 class="font-bold text-[18px]">Unlimited Projects & Code Export</h1>
+                            <p class="text-[14px] text-stone-400">Create and export unlimited websites to fully functional
+                            <br>Next.js, Tailwind CSS and Shadcn apps.</p>
+                        </div>
+                    </div>
+                    <div class="w-[100%]  flex justify-start gap-[15px]">
+                        <img src="/Files/Div [inline-flex] (1).png" class="w-[34px] h-[34px]">
+                        <div>
+                            <h1 class="font-bold text-[18px]">Unlimited AI Theme Generation</h1>
+                            <p class="text-[14px] text-stone-400">Generate unlimited beautiful themes and color palettes 
+                            <br>with AI to match your brand identity and style.</p>
+                        </div>
+                    </div>
+                    <div class="w-[100%]  flex justify-start gap-[15px]">
+                        <img src="/Files/Div [inline-flex] (3).png" class="w-[34px] h-[34px]">
+                        <div>
+                            <h1 class="font-bold text-[18px]">Community & Priority Support</h1>
+                            <p class="text-[14px] text-stone-400">Get access to our private Discord channel dedicated to
+                            <br>pro users for priority support.</p>
+                        </div>
+                    </div>
+                 </div>
+
+                <div class="mt-[50px] lg:mt-[70px] w-[100%] pl-[10px] lg:pl-[80px] px-[10px] lg:px-[80px] pb-[60px]">
+                    <h1 class="text-center text-[45px]">FAQ</h1>
+                    <P class="text-center text-[19px] text-stone-300 mt-[40px] mb-[70px]">Got other questions? Reach out in our Discord.
+                    </P>
+                    <div class="w-[100%]  flex flex-col items-center">
+                        <div class="w-[100%] lg:w-[65%] flex items-center gap-[10px] p-[10px]  bg-stone-800 rounded-[12px] mb-[20px]">
+                            <img src="/Files/Div [flex] (1).png" class="">
+                            <p>How is Reweb different than tools like Framer or Webflow?</p>
+                        </div>
+                        <div class="w-[100%] lg:w-[65%] flex items-center gap-[10px] p-[10px]  bg-stone-800 rounded-[12px] mb-[20px]">
+                            <img src="/Files/Div [flex] (1).png" class="">
+                            <p>What is the learning curve for Reweb?</p>
+                        </div>
+                        <div class="w-[100%] lg:w-[65%] flex items-center gap-[10px] p-[10px]  bg-stone-800 rounded-[12px] mb-[20px]">
+                            <img src="/Files/Div [flex] (1).png" class="">
+                            <p>Is the generated code high quality?</p>
+                        </div>
+                        <div class="w-[100%] lg:w-[65%] flex items-center gap-[10px] p-[10px]  bg-stone-800 rounded-[12px] mb-[20px]">
+                            <img src="/Files/Div [flex] (1).png" class="">
+                            <p>Do you plan to add more sections and templates?</p>
+                        </div>
+                        <div class="w-[100%] lg:w-[65%] flex items-center gap-[10px] p-[10px]  bg-stone-800 rounded-[12px] mb-[20px]">
+                            <img src="/Files/Div [flex] (1).png" class="">
+                            <p>Can I import my own components?</p>
+                        </div>
+                    </div> 
+                </div>
+                <!-- footer section  -->
+                <div class=" pt-[30px] lg:pt-[50px] pb-[30px] lg:pb-[50px] w-[100%] pl-[10px] px-[10px] lg:pl-[20px] lg:px-[20px] flex flex-col lg:flex-row justify-between gap-[30px] lg:gap-0 items-left lg:items-center">
+                    <div>
+                        <img src="/Files/Div [flex] (2).png" alt="">
+                        <p class="mb-[30px] mt-[20px] text-stone-300">Code at the speed of no-code.</p>
+                        <img src="/Files/Div [mt-4].png" alt="">
+                    </div>
+                    <div class="flex  justify-between lg:justify-center  gap-[80px]">
+                        <ul>
+                            <li class="font-bold">Community</li>
+                            <li class="text-stone-300 mt-[20px] mb-[20px]">Discord</li>
+                            <li class="text-stone-300"></li>Email</li>
+                        </ul>
+                        <ul>
+                            <li class="font-bold">Legal</li>
+                            <li class="text-stone-300 mt-[20px] mb-[20px]">Terms of Service</li>
+                            <li class="text-stone-300">Privacy Policy</li>
+                        </ul>
+                    </div>
+                </div>
+        
 
             </div>
 
